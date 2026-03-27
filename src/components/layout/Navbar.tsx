@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Search, ShoppingBag, Menu, X, User } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
 
 const Navbar: React.FC = () => {
+    const { cartCount } = useCart();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -38,7 +40,7 @@ const Navbar: React.FC = () => {
                         </Link>
                         <Link to="/cart" className="hover:text-accent transition-colors relative">
                             <ShoppingBag size={20} strokeWidth={1.5} />
-                            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] text-white">0</span>
+                            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] text-white">{cartCount}</span>
                         </Link>
                         <button onClick={() => setIsMenuOpen(true)} className="lg:hidden p-1">
                             <Menu size={24} strokeWidth={1.5} />

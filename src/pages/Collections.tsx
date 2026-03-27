@@ -119,12 +119,14 @@ const Collections: React.FC = () => {
                         So if I wrap it in `hidden lg:block`, I kill the mobile version.
                     */}
                     {/* Correcting structure -> Render FilterSidebar once, let IT handle the responsive logic. */}
-                    <FilterSidebar
-                        filters={filters}
-                        setFilters={setFilters}
-                        isOpen={isFilterOpen}
-                        onClose={() => setIsFilterOpen(false)}
-                    />
+                    <div className="lg:hidden">
+                        <FilterSidebar
+                            filters={filters}
+                            setFilters={setFilters}
+                            isOpen={isFilterOpen}
+                            onClose={() => setIsFilterOpen(false)}
+                        />
+                    </div>
 
                     {/* Grid */}
                     <main className="flex-1">

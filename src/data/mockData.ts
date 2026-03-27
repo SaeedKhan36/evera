@@ -13,7 +13,7 @@ export const products = [
         name: 'Diamond Solitaire Necklace',
         price: 1200.00,
         category: 'Necklaces',
-        image: 'https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&q=80&w=1000',
+        image: 'necklace pic.jpg',
         description: 'Elegant diamond pendant on a delicate gold chain.',
         isNew: false
     },
@@ -75,7 +75,7 @@ export const products = [
 
 export const categories = [
     { id: 'rings', name: 'Rings', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=800' },
-    { id: 'necklaces', name: 'Necklaces', image: 'https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&q=80&w=800' },
+    { id: 'necklaces', name: 'Necklaces', image: '/necklace pic.jpg' },
     { id: 'earrings', name: 'Earrings', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800' },
     { id: 'bracelets', name: 'Bracelets', image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800' }
 ];

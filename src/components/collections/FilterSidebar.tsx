@@ -53,6 +53,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, setFilters, isOp
                     <h2 className="text-2xl font-serif text-primary">Filters</h2>
                     <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded-full transition-colors"><X size={24} /></button>
                 </div>
+                // for git hub//
 
                 {/* Categories */}
                 <div className="mb-10">

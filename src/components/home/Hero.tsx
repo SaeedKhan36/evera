@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                             {/* Using pinkish bg from reference image 1 for placeholders */}
                             <div className="absolute inset-0 bg-[#FFECE9]"></div> {/* Fallback/Placeholder color */}
                             <img
-                                src="https://images.unsplash.com/photo-1617038224558-2834a2d10c72?q=80&w=1000&auto=format&fit=crop"
+                                src="/ZirconNecklace1.webp"
                                 alt="Jewellery Model"
                                 className="relative z-10 w-full h-full object-cover mix-blend-multiply opacity-90 hover:scale-105 transition-transform duration-1000"
                             />

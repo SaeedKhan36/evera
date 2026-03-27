@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Plus } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
 
 export interface Product {
     id: string;
@@ -16,6 +17,17 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const { addToCart } = useCart();
+
+    const handleAddToCart = (e: React.MouseEvent) => {
+        e.preventDefault(); // Prevent navigation to product detail
+        e.stopPropagation();
+        addToCart(product);
+        // Optional: Simple user feedback
+        // In a real app, use a Toast notification
+        // alert(`${product.name} added to cart!`); 
+    };
+
     return (
         <div className="group cursor-pointer">
             <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
@@ -35,6 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
                 {/* Quick Add Button Overlay */}
                 <button
+                    onClick={handleAddToCart}
                     className="absolute bottom-4 right-4 translate-y-full opacity-0 bg-white p-3 text-primary shadow-lg transition-all duration-300 hover:bg-black hover:text-white group-hover:translate-y-0 group-hover:opacity-100"
                     title="Add to Cart"
                 >
